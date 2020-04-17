@@ -1,9 +1,10 @@
 class Memory {
     constructor() {
+      // create an array of 64 bit floating point numbers with length of 1024
       this.memory = new Float64Array(1024);
       this.head = 0;
     }
-  
+    
     allocate(size) {
       if (this.head + size > this.memory.length) {
         return null;
@@ -44,4 +45,4 @@ class Memory {
     }
   }
   
-  export default Memory;
+  module.exports = Memory;
